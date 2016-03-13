@@ -1,6 +1,10 @@
-# Export-config
+# ember-export-config
 
-This README outlines the details of collaborating on this Ember addon.
+Ever wanted to have your environment.js file kept not in the meta but as a separate file? Well this addon is doing just that!
+
+This addon will create a new file called config.js in your assets directory.
+
+You'll need to add it in your index.html file.
 
 ## Installation
 

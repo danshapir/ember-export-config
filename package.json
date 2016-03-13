@@ -1,7 +1,7 @@
 {
-  "name": "export-config",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "name": "ember-export-config",
+  "version": "0.1.0",
+  "description": "Export your environment.js into another file.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Dan Shapir",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
