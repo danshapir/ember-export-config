@@ -7,7 +7,7 @@ This addon will create a new file called config.js in your assets directory.
 You'll need to add it in your index.html file.
 
 ## Configuration
-If you want to disable the plugin:
+If you want to configure it, those are the defaults:
 ```js
   var app = new EmberApp(defaults, {
     'ember-export-config': {
