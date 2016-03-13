@@ -8,7 +8,8 @@ You'll need to add it in your index.html file.
 
 ## Configuration
 If you want to disable the plugin:
-`var app = new EmberApp(defaults, {
+```json
+  var app = new EmberApp(defaults, {
     'ember-cli-bootstrap-sassy': {
       'js': false
     },
@@ -16,7 +17,8 @@ If you want to disable the plugin:
       enabled: false
     },
     storeConfigInMeta: false
-  });`
+  });
+```
 
 ## Installation
 
