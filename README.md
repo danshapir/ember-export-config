@@ -10,13 +10,10 @@ You'll need to add it in your index.html file.
 If you want to disable the plugin:
 ```json
   var app = new EmberApp(defaults, {
-    'ember-cli-bootstrap-sassy': {
-      'js': false
-    },
-    SRI: {
-      enabled: false
-    },
-    storeConfigInMeta: false
+    'ember-export-config': {
+      enabled: true,
+      fileName: 'config.js'
+    }
   });
 ```
 

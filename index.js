@@ -1,12 +1,22 @@
 /* jshint node: true */
 'use strict';
-var fs           = require('fs');
-var path           = require('path');
+var fs           = require('fs'),
+    path           = require('path'),
+    util = require('util'),
+    extend = util._extend;
+
+var defaultOptions = {
+    enabled: true,
+    fileName: 'config.js'
+};
+
 module.exports = {
   name: 'export-config',
   included: function(app) {
     this._super.included(app);
-    if (app.options['ember-export-config']) {
+    var options = extend(defaultOptions, app.options['ember-export-config']);
+    if (options.enabled) {
+      console.log('Im in!!');
       app._contentForConfigModule = function () {
         var content = arguments[0];
         var config = arguments[1];
@@ -17,7 +27,7 @@ module.exports = {
         fs.writeFileSync(path.join(app.bowerDirectory, 'tmpConfig.js'), envFile, 'utf8');
         content.push("return require('"+ exportLocation +"')['default']");
       };
-      app.import(path.join(app.bowerDirectory, 'tmpConfig.js'), { outputFile: 'assets/config.js'});
+      app.import(path.join(app.bowerDirectory, 'tmpConfig.js'), { outputFile: 'assets/' + options.fileName});
     }
   }
 };
