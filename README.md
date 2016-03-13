@@ -8,7 +8,7 @@ You'll need to add it in your index.html file.
 
 ## Configuration
 If you want to disable the plugin:
-```json
+```js
   var app = new EmberApp(defaults, {
     'ember-export-config': {
       enabled: true,
